@@ -22,6 +22,23 @@ This project utilizes a dual-language architecture, leveraging the performance o
 
 ---
 
+## ML-Main Development and Dataset Details
+
+This section provides specific context for the files and datasets found in the **`ML-Main/`** directory, which was used for classifier training and validation.
+
+* **`main.py`**: Contains the **Grid Search** logic and comprehensive performance **reports** for the various classifiers tested (SVM, Random Forest, KNN).
+* **`SVMtrainSave.py`**: Handles the final **export** of the chosen **SVM model** and the necessary **data scaler** for subsequent use in the C++ environment via pybind11.
+
+### Datasets
+
+* The most recent and utilized dataset version is structured as `gesture_*_dataset_4.csv` (where `*` is `train` or `test`).
+* This dataset is located in the **`DatasetsCsv\Dataset 3`** folder.
+* The older dataset, corresponding to **Dataset 0**, is labeled with the suffix `*_v1`.
+* **Noise Class:** In **Dataset 2 and Dataset 3**, the **noise class (0)** was not used during training.
+* *Note on Batch Files:* Do not execute the included `.bat` file; it was only used internally to prepare video files for reading due to metadata issues from the original recording device.
+
+---
+
 ## Testing and Validation Resources
 
 The `videos/` folder contains several video files useful for testing the real-time application.
